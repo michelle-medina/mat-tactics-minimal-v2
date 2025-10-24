@@ -45,7 +45,7 @@ export const RecentCaptures = () => {
             Recent Captures
           </h2>
         </div>
-        <Button variant="ghost" size="sm" className="text-[10px] font-bold uppercase tracking-wider hover:bg-foreground hover:text-background transition-colors h-7 px-2">
+        <Button variant="ghost" size="sm" className="text-[10px] font-bold uppercase tracking-wider hover:bg-foreground hover:text-background hover:border-l-2 hover:border-l-[hsl(var(--accent-cyan))] transition-colors h-7 px-2">
           View All
           <ChevronRight className="h-3.5 w-3.5 ml-0.5" strokeWidth={2} />
         </Button>

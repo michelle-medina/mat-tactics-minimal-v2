@@ -26,8 +26,8 @@ const Index = () => {
           </div>
           
           {/* Streak Badge */}
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 bg-foreground text-background">
-            <Flame className="h-3.5 w-3.5" aria-hidden="true" />
+          <div className="flex items-center gap-1.5 px-2.5 py-1.5 bg-foreground text-background border-l-2 border-[hsl(var(--accent-pink))]">
+            <Flame className="h-3.5 w-3.5 text-[hsl(var(--accent-pink))]" aria-hidden="true" />
             <div className="text-xs font-bold tracking-tight">5 DAYS</div>
           </div>
         </div>

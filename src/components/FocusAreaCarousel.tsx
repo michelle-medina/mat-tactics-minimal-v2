@@ -87,7 +87,7 @@ export const FocusAreaCarousel = () => {
           </Button>
 
           {/* Counter */}
-          <Badge className="absolute top-2 right-2 z-10 bg-foreground text-background border-0 text-[10px] px-2 py-0.5 font-bold tracking-wider">
+          <Badge className="absolute top-2 right-2 z-10 bg-foreground text-background border-l-2 border-[hsl(var(--accent-cyan))] text-[10px] px-2 py-0.5 font-bold tracking-wider">
             {currentIndex + 1} / {focusAreas.length}
           </Badge>
         </div>
@@ -101,7 +101,7 @@ export const FocusAreaCarousel = () => {
             <span className="font-medium">{currentArea.position}</span>
             <span>•</span>
             <span className="font-medium">{currentArea.category}</span>
-            <Badge variant="secondary" className="ml-auto text-[9px] px-1.5 py-0.5 font-bold bg-foreground text-background">
+            <Badge variant="secondary" className="ml-auto text-[9px] px-1.5 py-0.5 font-bold bg-foreground text-background border-l-2 border-[hsl(var(--accent-blue))]">
               GI
             </Badge>
           </div>

@@ -14,7 +14,7 @@ export const TrainingNote = () => {
         </Button>
       </div>
 
-      <Card className="p-4 border-l-4 border-l-foreground bg-card border-0 shadow-[0_2px_8px_-2px_hsl(0_0%_0%_/_0.08)]">
+      <Card className="p-4 border-l-4 border-l-[hsl(var(--accent-orange))] bg-card border-0 shadow-[0_2px_8px_-2px_hsl(0_0%_0%_/_0.08)]">
         <p className="text-foreground text-sm leading-relaxed font-medium">
           "Keep your frames strong, watch for underhooks, more energy between scrambles"
         </p>

@@ -6,11 +6,11 @@ interface StatItemProps {
 }
 
 const StatItem = ({ value, label }: StatItemProps) => (
-  <Card className="flex-1 p-4 text-center border-0 bg-card hover:bg-foreground hover:text-background transition-all duration-300 shadow-[0_2px_8px_-2px_hsl(0_0%_0%_/_0.08)] group cursor-pointer">
-    <div className="text-2xl font-bold text-foreground group-hover:text-background mb-1 tracking-tighter">
+  <Card className="flex-1 p-4 text-center border-0 bg-card hover:bg-foreground hover:text-background transition-all duration-300 shadow-[0_2px_8px_-2px_hsl(0_0%_0%_/_0.08)] hover:shadow-[0_10px_30px_-5px_hsl(0_0%_0%_/_0.1),_0_0_0_2px_hsl(var(--accent-yellow))] group cursor-pointer">
+    <div className="text-2xl font-bold text-foreground group-hover:text-[hsl(var(--accent-yellow))] mb-1 tracking-tighter transition-colors">
       {value}
     </div>
-    <div className="text-[9px] text-muted-foreground group-hover:text-background/80 uppercase tracking-[0.1em] font-bold">
+    <div className="text-[9px] text-muted-foreground group-hover:text-background/80 uppercase tracking-[0.1em] font-bold transition-colors">
       {label}
     </div>
   </Card>
