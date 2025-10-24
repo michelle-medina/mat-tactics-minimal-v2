@@ -56,12 +56,10 @@ export const BottomNav = () => {
           </Button>
         </div>
 
-        <div className="relative">
-          <div className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
-            <Badge className="bg-[hsl(var(--accent-yellow))] text-foreground border-0 text-[8px] px-1.5 py-0.5 font-bold uppercase tracking-wider">
-              Soon
-            </Badge>
-          </div>
+        <div className="relative flex flex-col items-center">
+          <Badge className="absolute -top-1 bg-[hsl(var(--accent-yellow))] text-foreground border-0 text-[7px] px-1.5 py-0.5 font-bold uppercase tracking-wider">
+            Soon
+          </Badge>
           <NavItem
             icon={<Target className="h-5 w-5" strokeWidth={1.5} />}
             label="GamePlan"
