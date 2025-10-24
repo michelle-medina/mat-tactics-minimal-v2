@@ -1,5 +1,6 @@
 import { Home, BookOpen, Target, User, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { useNavigate, useLocation } from "react-router-dom";
 
 interface NavItemProps {
@@ -55,13 +56,22 @@ export const BottomNav = () => {
           </Button>
         </div>
 
-        <NavItem
-          icon={<Target className="h-5 w-5" strokeWidth={1.5} />}
-          label="GamePlan"
-        />
+        <div className="relative">
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
+            <Badge className="bg-[hsl(var(--accent-yellow))] text-foreground border-0 text-[8px] px-1.5 py-0.5 font-bold uppercase tracking-wider">
+              Soon
+            </Badge>
+          </div>
+          <NavItem
+            icon={<Target className="h-5 w-5" strokeWidth={1.5} />}
+            label="GamePlan"
+          />
+        </div>
         <NavItem
           icon={<User className="h-5 w-5" strokeWidth={1.5} />}
           label="Profile"
+          active={location.pathname === "/profile"}
+          onClick={() => navigate("/profile")}
         />
       </div>
     </nav>
