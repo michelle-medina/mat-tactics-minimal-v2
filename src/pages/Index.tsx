@@ -16,32 +16,32 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background pb-20">
       {/* Header */}
-      <header className="px-4 py-6 animate-fade-in">
-        <div className="flex items-start justify-between max-w-2xl mx-auto">
+      <header className="px-6 py-8 border-b border-border animate-fade-in">
+        <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div>
-            <h1 className="text-2xl font-medium text-foreground tracking-tight mb-1">
-              Mat Tactics
+            <h1 className="text-3xl font-bold text-foreground tracking-tighter mb-0.5">
+              MAT TACTICS
             </h1>
-            <p className="text-xs text-muted-foreground">{today}</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider">{today}</p>
           </div>
           
           {/* Streak Badge */}
-          <div className="flex items-center gap-1.5 px-3 py-1.5 border border-border rounded-lg">
-            <Flame className="h-4 w-4 text-foreground" aria-hidden="true" />
-            <div className="text-sm font-medium text-foreground">5 Days</div>
+          <div className="flex items-center gap-2 px-4 py-2 bg-foreground text-background">
+            <Flame className="h-4 w-4" aria-hidden="true" />
+            <div className="text-sm font-bold tracking-tight">5 DAYS</div>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="px-4 space-y-3 max-w-2xl mx-auto">
+      <main className="px-6 py-8 space-y-12 max-w-7xl mx-auto">
         {/* Focus Areas Section */}
         <section className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-sm font-medium text-foreground uppercase tracking-wide">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-foreground uppercase tracking-tighter">
               Focus Areas
             </h2>
-            <Button variant="ghost" size="sm" className="text-xs h-8 px-2">
+            <Button variant="ghost" size="sm" className="text-xs font-bold uppercase tracking-wider hover:bg-foreground hover:text-background transition-colors">
               View All
             </Button>
           </div>
