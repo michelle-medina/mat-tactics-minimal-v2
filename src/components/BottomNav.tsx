@@ -1,14 +1,17 @@
 import { Home, BookOpen, Target, User, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface NavItemProps {
   icon: React.ReactNode;
   label: string;
   active?: boolean;
+  onClick?: () => void;
 }
 
-const NavItem = ({ icon, label, active = false }: NavItemProps) => (
+const NavItem = ({ icon, label, active = false, onClick }: NavItemProps) => (
   <button
+    onClick={onClick}
     className={`flex flex-col items-center gap-1 px-3 py-2 transition-colors ${
       active
         ? "text-foreground"
@@ -22,17 +25,23 @@ const NavItem = ({ icon, label, active = false }: NavItemProps) => (
 );
 
 export const BottomNav = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-card border-t border-border z-50">
       <div className="max-w-2xl mx-auto flex items-center justify-around relative h-16">
         <NavItem
           icon={<Home className="h-5 w-5" strokeWidth={1.5} />}
           label="Home"
-          active
+          active={location.pathname === "/"}
+          onClick={() => navigate("/")}
         />
         <NavItem
           icon={<BookOpen className="h-5 w-5" strokeWidth={1.5} />}
           label="Journal"
+          active={location.pathname === "/journal"}
+          onClick={() => navigate("/journal")}
         />
         
         {/* Floating Add Button */}
