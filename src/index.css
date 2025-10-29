@@ -48,12 +48,12 @@ All colors MUST be HSL.
     --shadow-editorial: 0 10px 30px -5px hsl(0 0% 0% / 0.1);
     --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.08);
     
-    /* Accent colors - sophisticated touches */
-    --accent-cyan: 188 100% 71%;
-    --accent-pink: 330 100% 60%;
-    --accent-blue: 221 83% 53%;
-    --accent-orange: 25 75% 47%;
-    --accent-yellow: 64 100% 60%;
+    /* Accent colors - AA accessible contrast ratios */
+    --accent-cyan: 188 85% 35%;
+    --accent-pink: 330 85% 40%;
+    --accent-blue: 221 83% 45%;
+    --accent-orange: 25 95% 35%;
+    --accent-yellow: 42 100% 45%;
   }
 }
 

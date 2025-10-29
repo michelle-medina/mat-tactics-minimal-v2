@@ -57,7 +57,7 @@ export const BottomNav = () => {
         </div>
 
         <div className="relative flex flex-col items-center">
-          <Badge className="absolute -top-1 bg-[hsl(var(--accent-yellow))] text-foreground border-0 text-[7px] px-1.5 py-0.5 font-bold uppercase tracking-wider">
+          <Badge className="absolute top-1 right-0 bg-[hsl(var(--accent-yellow))] text-foreground border-0 text-[7px] px-1.5 py-0.5 font-bold uppercase tracking-wider">
             Soon
           </Badge>
           <NavItem

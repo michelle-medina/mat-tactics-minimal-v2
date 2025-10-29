@@ -20,10 +20,11 @@ export default defineConfig(({ mode }) => ({
         name: "Mat Tactics - Visual Jiu-Jitsu Journal",
         short_name: "Mat Tactics",
         description: "A visual Jiu-Jitsu journal to capture techniques, track progress, and build your GamePlan",
-        theme_color: "#E63946",
-        background_color: "#141414",
+        theme_color: "#0D0D0D",
+        background_color: "#FFFFFF",
         display: "standalone",
         orientation: "portrait",
+        categories: ["sports", "health", "lifestyle"],
         icons: [
           {
             src: "/icon-192.png",
