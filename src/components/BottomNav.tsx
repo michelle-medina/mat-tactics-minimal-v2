@@ -1,7 +1,9 @@
-import { Home, BookOpen, Target, User, Plus } from "lucide-react";
+import { Home, BookOpen, Target, User, Plus, Video, Upload, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { useState } from "react";
 
 interface NavItemProps {
   icon: React.ReactNode;
@@ -28,9 +30,45 @@ const NavItem = ({ icon, label, active = false, onClick }: NavItemProps) => (
 export const BottomNav = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-card border-t border-border z-50">
+    <>
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetContent side="bottom" className="rounded-t-3xl">
+          <SheetHeader>
+            <SheetTitle>Capture Technique</SheetTitle>
+          </SheetHeader>
+          <div className="flex flex-col gap-3 mt-6 pb-4">
+            <Button
+              variant="outline"
+              className="h-14 justify-start gap-3 text-base"
+              onClick={() => setIsOpen(false)}
+            >
+              <Video className="h-5 w-5" />
+              Record Technique
+            </Button>
+            <Button
+              variant="outline"
+              className="h-14 justify-start gap-3 text-base"
+              onClick={() => setIsOpen(false)}
+            >
+              <Upload className="h-5 w-5" />
+              Upload Video
+            </Button>
+            <Button
+              variant="outline"
+              className="h-14 justify-start gap-3 text-base"
+              onClick={() => setIsOpen(false)}
+            >
+              <Share2 className="h-5 w-5" />
+              Import from Social
+            </Button>
+          </div>
+        </SheetContent>
+      </Sheet>
+
+      <nav className="fixed bottom-0 left-0 right-0 bg-card border-t border-border z-50">
       <div className="max-w-2xl mx-auto flex items-center justify-around relative h-16">
         <NavItem
           icon={<Home className="h-5 w-5" strokeWidth={1.5} />}
@@ -49,7 +87,12 @@ export const BottomNav = () => {
         <div className="absolute -top-6 left-1/2 -translate-x-1/2">
           <Button
             size="lg"
-            className="h-14 w-14 rounded-full bg-foreground text-background hover:bg-foreground/90 border border-border shadow-lg"
+            onClick={() => setIsOpen(!isOpen)}
+            className={`h-14 w-14 rounded-full transition-all ${
+              isOpen 
+                ? "bg-foreground text-background rotate-45" 
+                : "bg-foreground text-background hover:bg-foreground/90"
+            } border border-border shadow-lg`}
             aria-label="Add new capture"
           >
             <Plus className="h-6 w-6" strokeWidth={1.5} />
@@ -72,6 +115,7 @@ export const BottomNav = () => {
           onClick={() => navigate("/profile")}
         />
       </div>
-    </nav>
+      </nav>
+    </>
   );
 };
